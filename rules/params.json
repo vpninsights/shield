@@ -1,0 +1,522 @@
+[
+ {
+  "id": 1,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:__s|_ga|_gl|_hsenc|_hsmi|ck_subscriber_id)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:dclid|ef_id|fbclid|gad_source|gbraid|gclid)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:gclsrc|igshid|li_fat_id|mc_cid|mc_eid|mibextid)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 4,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:mkt_tok|msclkid|oly_anon_id|oly_enc_id|s_cid|srsltid)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 5,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:trk|trkemail|ttclid|twclid|utm_campaign|utm_content)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 6,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:utm_id|utm_medium|utm_name|utm_pubreferrer|utm_reader|utm_source)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 7,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:utm_swu|utm_term|utm_viz_id|vero_conv|vero_id|wbraid)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__s",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_hsmi",
+       "ck_subscriber_id",
+       "dclid",
+       "ef_id",
+       "fbclid",
+       "gad_source",
+       "gbraid",
+       "gclid",
+       "gclsrc",
+       "igshid",
+       "li_fat_id",
+       "mc_cid",
+       "mc_eid",
+       "mibextid",
+       "mkt_tok",
+       "msclkid",
+       "oly_anon_id",
+       "oly_enc_id",
+       "s_cid",
+       "srsltid",
+       "trk",
+       "trkemail",
+       "ttclid",
+       "twclid",
+       "utm_campaign",
+       "utm_content",
+       "utm_id",
+       "utm_medium",
+       "utm_name",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_source",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wbraid",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "[?&](?:yclid)=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "id": 1,
+  "priority": 1,
+  "action": {
+   "type": "modifyHeaders",
+   "requestHeaders": [
+    {
+     "header": "Referer",
+     "operation": "remove"
+    }
+   ]
+  },
+  "condition": {
+   "domainType": "thirdParty",
+   "resourceTypes": [
+    "script",
+    "image",
+    "xmlhttprequest",
+    "sub_frame",
+    "stylesheet",
+    "font",
+    "media",
+    "ping",
+    "other"
+   ]
+  }
+ }
+]

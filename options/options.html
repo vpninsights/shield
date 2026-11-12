@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shield settings</title><link rel="stylesheet" href="options.css"></head>
+<body><div class="wrap">
+<h1 class="t"><img src="../icons/icon48.png" alt="" width="34" height="34"> Shield</h1><p class="mut">Settings stay on this device. Nothing is sent anywhere unless you turn on the VPN companion.</p>
+<div class="layout"><nav id="nav"><button data-p="p1" class="on">Protection</button><button data-p="p2">Privacy signals</button><button data-p="p3">Cleanup</button><button data-p="p4">VPN companion</button><button data-p="p5">Sites</button><button data-p="p8">Custom rules</button><button data-p="p6">Backup</button><button data-p="p7">About</button></nav>
+<div>
+<section class="pane on" id="p1"><h2>Protection level</h2>
+  <div class="seg" id="level"><button data-l="standard">Standard</button><button data-l="strict">Strict</button><button data-l="custom">Custom</button></div>
+  <p class="mut sm"><b>Standard</b> blocks ads and trackers and cleans links. <b>Strict</b> also blocks scripts from other sites and cleans cookies when you close a site. Changing any switch below makes it Custom.</p>
+  <div class="row"><div><b>Block ads, trackers and session recorders</b><small>Our list of well known advertising, analytics and tracking services.</small></div><button class="tgl" data-key="blocking"></button></div>
+  <div class="row"><div><b>Remove tracking from links</b><small>Strips utm_*, fbclid, gclid and similar before the page loads.</small></div><button class="tgl" data-key="params"></button></div>
+  <div class="row"><div><b>Block scripts from other sites by default</b><small>Like NoScript. You can allow a site in the popup.</small></div><button class="tgl" data-key="jsThird"></button></div>
+  <div class="row"><div><b>Open the secure version of sites</b><small>Off by default. Browsers have their own HTTPS-first mode, and sites without HTTPS will not load.</small></div><button class="tgl" data-key="https"></button></div>
+</section>
+<section class="pane" id="p2"><h2>Privacy signals</h2>
+  <div class="row"><div><b>Open the real link</b><small>Skips the tracking redirect that Google, Facebook, YouTube and others put on links, and opens AMP pages as the real page.</small></div><button class="tgl" data-key="unwrap"></button></div>
+  <div class="row"><div><b>Warn about breached passwords</b><small>Off by default. When you finish typing a password, checks it against known breaches. Your password stays on this page: only the first 5 characters of its hash are sent to Have I Been Pwned.</small></div><button class="tgl" data-key="pwned"></button></div>
+  <div class="row"><div><b>Fingerprint shield</b><small>Hides canvas, audio and hardware readings that sites use to recognise your browser. On in Strict. A few sites that draw or edit images may look different.</small></div><button class="tgl" data-key="fingerprint"></button></div>
+  <div class="row"><div><b>Monday privacy report</b><small>A notification each Monday with last week's numbers. Calculated on your device.</small></div><button class="tgl" data-key="weekly"></button></div>
+  <div class="row"><div><b>Decline cookie banners</b><small>Presses "reject all" or "necessary only" on the common consent pop-ups. It never presses accept.</small></div><button class="tgl" data-key="banners"></button></div>
+  <div class="row"><div><b>Global Privacy Control</b><small>Tells sites not to sell or share your data. Many are legally required to honor it.</small></div><button class="tgl" data-key="gpc"></button></div>
+  <div class="row"><div><b>Hide WebRTC addresses</b><small>Stops sites reading your local network address.</small></div><button class="tgl" data-key="webrtc"></button></div>
+  <div class="row"><div><b>Drop the Referer sent to other sites</b><small>Off by default. Some sites need it to show their own images.</small></div><button class="tgl" data-key="referer"></button></div>
+</section>
+<section class="pane" id="p3"><h2>Cleanup</h2>
+  <div class="row"><div><b>Clear cookies when you close a site</b><small>When the last tab of a site closes. Sites on your keep list are skipped.</small></div><button class="tgl" data-key="cleanup"></button></div>
+  <div class="row"><div><b>Clear site storage as well</b><small>Local storage, IndexedDB and caches. Chrome, Edge and Brave only.</small></div><button class="tgl" data-key="cleanupStorage"></button></div>
+  <div class="col"><b>Keep me logged in on</b><small class="mut">One site per line, for example mail.example.com</small><textarea id="keep" rows="4" placeholder="mail.example.com"></textarea><button class="btn" id="saveKeep">Save list</button></div>
+</section>
+<section class="pane" id="p4"><h2>VPN companion</h2>
+  <p class="mut sm">Warns you if your IP address changes, which can mean your VPN dropped. When on, the extension asks vpninsights.com for your address every 5 minutes. That request reveals your IP to us like any website visit. We do not log it.</p>
+  <div class="row"><div><b>Watch my IP address</b><small>Off by default.</small></div><button class="tgl" data-key="vpnOn"></button></div>
+  <div class="col"><b>My VPN address</b><small class="mut" id="vpnInfo">Connect your VPN, then press the button. You are warned if your address stops matching it.</small><button class="btn" id="setBase">Use my current address as my VPN address</button><button class="btn g" id="clrBase">Forget it</button></div>
+</section>
+<section class="pane" id="p8"><h2>Custom rules</h2>
+  <p class="mut sm">Block your own list of domains, or import a public list. Domains only: one per line, a hosts file (<code>0.0.0.0 ads.example.com</code>) or the simple Adblock form (<code>||ads.example.com^</code>). Start a line with <code>@@||</code> to allow a domain. Rules that need paths or page elements are skipped.</p>
+  <div class="col"><b>My rules</b><textarea id="mine" rows="7" placeholder="||ads.example.com^&#10;tracker.example.net&#10;@@||cdn.example.com^"></textarea><div class="acts"><button class="btn" id="saveMine">Save my rules</button><span class="mut sm" id="mineInfo"></span></div></div>
+  <div class="col" style="margin-top:14px"><b>Import a list</b><small class="mut">From a file on your computer, or paste its address. Imported lists are kept as they are and are not updated by themselves. The list is data only: no code is loaded.</small>
+    <div class="acts"><label class="btn g">Choose a file<input type="file" id="listFile" accept=".txt,.list,.hosts,text/plain" hidden></label></div>
+    <div class="acts"><input id="listUrl" type="url" placeholder="https://example.com/blocklist.txt" style="flex:1;width:100%;min-width:0;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)"><button class="btn" id="listGo">Import</button></div>
+    <p class="mut sm" id="listMsg"></p></div>
+  <div class="col" style="margin-top:14px"><b>Imported lists</b><div id="lists"></div></div>
+</section>
+<section class="pane" id="p5"><h2>Sites</h2><p class="mut sm">Your choices for each site.</p><div id="sites"></div></section>
+<section class="pane" id="p6"><h2>Backup</h2><p class="mut sm">Move your settings to another browser.</p><div class="acts"><button class="btn g" id="exp">Export settings</button><label class="btn g">Import settings<input type="file" id="imp" accept="application/json" hidden></label><button class="btn d" id="rst">Reset everything</button></div><p id="msg" class="mut sm"></p></section>
+<section class="pane" id="p7"><h2>About</h2><p>Shield by VPNInsights <span id="ver"></span></p><p class="mut sm">Made by <a href="https://vpninsights.com" target="_blank" rel="noopener">VPNInsights</a>. Author: Iam Waqas. MIT licence.</p><p class="mut sm">No account, no analytics, no ads. Everything runs on your device. The only network request we make is the optional VPN companion check.</p><p class="mut sm">Why we ask for permissions: read and change pages (to block and clean them), cookies and browsing data (cleanup), web requests (to count what was blocked), privacy (WebRTC), notifications (VPN warnings).</p><p class="mut sm">It is not a VPN. It does not hide your IP address. Pair it with a VPN we have tested.</p><p><a href="https://vpninsights.com/tools/browser-privacy-analyzer" target="_blank" rel="noopener">Run the full browser privacy check</a></p></section>
+</div></div></div><script src="../src/safe-html.js"></script><script src="options.js"></script></body></html>

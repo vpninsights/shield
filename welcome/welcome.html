@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Welcome to Shield</title>
+<style>
+:root{--ink:#1c1735;--mut:#6b6788;--line:#e4e1f2;--vio:#6d28d9;--soft:#f3efff;--bg:#f6f5fb;--card:#fff;--ok:#047857}
+@media (prefers-color-scheme:dark){:root{--ink:#efecff;--mut:#a19cc4;--line:#322c52;--vio:#a78bfa;--soft:#2b2250;--bg:#13101f;--card:#1c1830;--ok:#34d399}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+.w{max-width:900px;margin:0 auto;padding:36px 18px 48px;display:grid;gap:18px}p{margin:0}.mut{color:var(--mut)}
+.hero{text-align:center;display:grid;gap:8px;justify-items:center}.hero img{width:72px;height:72px;border-radius:18px}h1{margin:0;font-size:28px}h2{margin:0 0 4px;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.fi{width:1em;height:1em;fill:currentColor;vertical-align:-.125em}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}.card b{display:block;margin-bottom:3px}
+.n{width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--vio);display:grid;place-items:center;font-weight:900;margin-bottom:8px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:8px}.seg button{border:0;background:none;color:var(--mut);padding:8px 14px;font:inherit;font-weight:700;cursor:pointer}.seg button.on{background:var(--vio);color:#fff}
+a.btn,button.btn{display:inline-block;margin-top:8px;background:var(--vio);color:#fff;border:0;border-radius:10px;padding:9px 16px;font:inherit;font-weight:800;text-decoration:none;cursor:pointer}
+.tour{display:grid;gap:10px}.t{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}.t .ic{width:34px;height:34px;border-radius:10px;background:var(--soft);color:var(--vio);display:grid;place-items:center}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px}.tg{width:42px;height:24px;border-radius:99px;border:0;background:var(--line);position:relative;flex:none;cursor:pointer;padding:0}.tg::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .12s}.tg.on{background:var(--vio)}.tg.on::after{left:21px}
+.foot{text-align:center;font-size:13px}.foot a{color:var(--vio)}
+</style></head><body><div class="w">
+<div class="hero"><img src="../icons/icon128.png" alt=""><h1>Welcome to Shield</h1><p class="mut">Protection is already on. Here is what you now have, and the two minutes of setup worth doing.</p></div>
+
+<div><h2>Set up</h2><div class="steps">
+<div class="card"><div class="n">1</div><b>Pin the icon</b><p class="mut">Click the puzzle piece in your toolbar and pin Shield. The number on the icon is how many trackers it blocked on the page you are on.</p></div>
+<div class="card"><div class="n">2</div><b>Pick a level</b><p class="mut"><b style="display:inline">Standard</b> blocks ads and trackers, cleans links and declines cookie banners. <b style="display:inline">Strict</b> adds more: it blocks scripts from other sites, hides your browser fingerprint, and clears a site's cookies when you close it. Some sites may need a click on "Site broken?" in Strict.</p><div class="seg" id="lv"><button data-l="standard" class="on">Standard</button><button data-l="strict">Strict</button></div></div>
+<div class="card"><div class="n">3</div><b>Breached-password warning</b><div class="row"><p class="mut">Warns you when a password you type has appeared in a known data breach. Your password stays on the page. Only 5 characters of its hash are sent to Have I Been Pwned. Off until you turn it on.</p><button class="tg" id="tPwned" aria-label="Breached-password warning"></button></div></div>
+</div></div>
+
+<div class="card tour"><h2>What is in the popup</h2>
+<div class="t"><div class="ic" data-ic="shield"></div><div><b>Privacy grade</b><p class="mut">A to F for the page you are on, and the companies that tried to track you, grouped (Google, Meta, Criteo and so on).</p></div></div>
+<div class="t"><div class="ic" data-ic="cookie"></div><div><b>Cookie banners</b><p class="mut">Shield presses "reject" or "necessary only" for you. It never presses accept.</p></div></div>
+<div class="t"><div class="ic" data-ic="eye"></div><div><b>Trackers tab</b><p class="mut">Everything it blocked, with an Allow button, plus other sites running scripts that you can block.</p></div></div>
+<div class="t"><div class="ic" data-ic="lock"></div><div><b>VPN tab</b><p class="mut">Shows your address and whether it matches your VPN. Shield is not a VPN. It checks the one you already use.</p></div></div>
+<div class="t"><div class="ic" data-ic="chart"></div><div><b>Weekly report</b><p class="mut">Open it from the popup footer, or wait for the Monday notification. Numbers only, kept on your device. You can turn the notification off in Settings.</p></div></div>
+<div class="t"><div class="ic" data-ic="wrench"></div><div><b>If a site breaks</b><p class="mut">Open the popup and press "Site broken?". It turns protection down step by step, and you can copy a report to send us.</p></div></div>
+<p><a class="btn" id="aOpts" href="#">Open all settings</a> <a class="btn" href="https://vpninsights.com/tools/browser-privacy-analyzer" target="_blank" rel="noopener">Run the free privacy check</a></p>
+</div>
+
+<div class="card"><b>Your privacy first.</b> <span class="mut">Shield needs permission to read and change pages so it can block things. It has no account and no analytics, and it never records or sends where you browse. It is not a VPN and does not hide your IP address.</span></div>
+<p class="foot mut">Shield is made by <a href="https://vpninsights.com" target="_blank" rel="noopener">VPNInsights</a>. Author: Iam Waqas. <a href="https://vpninsights.com/shield/privacy" target="_blank" rel="noopener">Privacy policy</a></p>
+</div><script src="../src/safe-html.js"></script><script src="../popup/icons.js"></script><script src="welcome.js"></script></body></html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shield</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header>
+  <div class="brand"><img class="logo" src="../icons/icon48.png" alt="" width="30" height="30"><div><b>Shield</b><span id="host">...</span></div></div>
+  <span id="state" class="pill">...</span>
+</header>
+<nav class="tabs" id="tabs" hidden>
+  <button data-tab="shield" class="on"><i data-ic="shield"></i>Shield</button>
+  <button data-tab="trackers"><i data-ic="eye"></i>Trackers</button>
+  <button data-tab="vpn"><i data-ic="lock"></i>VPN</button>
+</nav>
+
+<main id="main" hidden>
+  <section id="p-shield" class="pane on">
+    <div class="hero"><div id="ring" class="ring"><div><b id="letter">-</b><small>PRIVACY</small></div></div><div><h3 id="title">Checking this page</h3><p id="sub" class="mut"></p></div></div>
+    <div class="tiles" id="tiles"></div>
+    <div id="notes"></div>
+    <div><div class="sec"><span>Who is tracking you here</span><a href="#" id="seeAll">See all</a></div><div class="trk" id="topco"></div></div>
+    <div class="ctl">
+      <div class="c"><div class="l"><i data-ic="power"></i><div><b>Protection on this site</b><small>Pause it if a page breaks</small></div></div><button id="tPause" class="tg" aria-label="Protection on this site"></button></div>
+      <div class="c"><div class="l"><i data-ic="cookie"></i><div><b>Decline cookie banners</b><small id="banNote">Presses "reject" for you</small></div></div><button id="tBan" class="tg" aria-label="Decline cookie banners"></button></div>
+      <div class="c"><div class="l"><i data-ic="fp"></i><div><b>Fingerprint shield</b><small id="fpNote">Hides canvas, audio and hardware probes</small></div></div><button id="tFp" class="tg" aria-label="Fingerprint shield"></button></div>
+      <div class="c"><div class="l"><i data-ic="shield"></i><div><b>Send Do Not Sell signal</b><small>Global Privacy Control, every site</small></div></div><button id="tGpc" class="tg" aria-label="Global Privacy Control"></button></div>
+      <div class="c col"><div class="l"><i data-ic="code"></i><div><b>JavaScript on this site</b><small id="jsNote"></small></div></div>
+        <div class="seg" id="seg"><button data-m="all">Allow all</button><button data-m="third">Block third-party</button><button data-m="none">Block all</button></div></div>
+    </div>
+    <div class="acts"><button id="bClean" class="btn"><i data-ic="link"></i><span>Copy clean link</span></button><button id="bBroken" class="btn"><i data-ic="wrench"></i><span>Site broken?</span></button></div>
+    <div class="acts one"><button id="bWipe" class="btn"><i data-ic="times"></i><span>Clear this site's data</span></button></div>
+    <section id="broken" class="panel" hidden>
+      <b>Is this site broken?</b><p class="mut">Try these in order. The page reloads each time.</p>
+      <button class="btn wide" data-fix="third">1. Let this site's own scripts run, block other sites' scripts</button>
+      <button class="btn wide" data-fix="ten">2. Turn protection off for 10 minutes</button>
+      <button class="btn wide" data-fix="off">3. Turn protection off on this site</button>
+      <button class="btn wide" id="bCopy">Copy a report to send us</button>
+    </section>
+  </section>
+
+  <section id="p-trackers" class="pane"><div id="log"></div></section>
+
+  <section id="p-vpn" class="pane">
+    <div class="vpn" id="vpnCard"><p class="mut">Checking your address...</p></div>
+    <div class="ctl">
+      <div class="c"><div class="l"><i data-ic="bell"></i><div><b>Warn me if my address changes</b><small>Catches a dropped VPN. Asks vpninsights.com every 5 minutes.</small></div></div><button id="tVpn" class="tg" aria-label="Warn me if my address changes"></button></div>
+      <div class="c"><div class="l"><i data-ic="tower"></i><div><b>Hide local network address</b><small>Stops WebRTC leaking your real IP</small></div></div><button id="tRtc" class="tg" aria-label="Hide local network address"></button></div>
+    </div>
+    <div class="acts"><button id="bBase" class="btn"><i data-ic="check"></i><span>This is my VPN address</span></button><button id="bTest" class="btn p"><i data-ic="sync"></i><span>Full leak test</span></button></div>
+    <p class="mut sm">Shield is not a VPN and does not hide your address. This tab checks the VPN you already use.</p>
+  </section>
+</main>
+
+<main id="na" hidden><p class="mut pad">Browsers do not let extensions run on their own pages. Your protection still works everywhere else.</p><button id="bOpts" class="btn wide">Open settings</button></main>
+<footer><a id="aReport" href="#"><i data-ic="chart"></i> Weekly report</a><span id="week"></span><a id="aSet" href="#"><i data-ic="gear"></i> Settings</a></footer>
+<script src="../src/safe-html.js"></script><script src="../src/categories.js"></script><script src="../src/breaches.js"></script><script src="../src/shared.js"></script><script src="icons.js"></script><script src="popup.js"></script></body></html>
