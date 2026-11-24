@@ -12,12 +12,12 @@ Website: [vpninsights.com/shield](https://vpninsights.com/shield) · Privacy pol
 
 | Browser | Status |
 |---|---|
-| Chrome, Brave, Vivaldi | Submitted to the Chrome Web Store (link coming) |
-| Microsoft Edge | In review on Edge Add-ons (link coming) |
-| Firefox | In review on addons.mozilla.org (link coming) |
-| Opera | In review on Opera add-ons (link coming) |
+| Chrome, Brave, Vivaldi | [Install from the Chrome Web Store](https://chromewebstore.google.com/detail/shield-by-vpninsights-tra/hoffdjbbgjafckjomngkejkpkohdoknh) |
+| Microsoft Edge | [Install from Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/kdggfpbdchknbdkbigmehnfkmljmimpm) |
+| Firefox | [Install from Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/shield-by-vpninsights/) |
+| Opera | In review on Opera add-ons. Until then, install the Chrome Web Store version. |
 
-Until the store links are live you can load it yourself, see [Try it from source](#try-it-from-source).
+You can also load it yourself, see [Try it from source](#try-it-from-source).
 
 ## What it does
 
